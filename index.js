@@ -176,4 +176,4 @@ const checkEveryStat = newOrders.every(({ status }) => status === "delivered");
 
 const checkSomeStat = newOrders.some(({ status }) => status === "delivered");
 
-console.log(checkSomeStat);
+// console.log(checkSomeStat);
