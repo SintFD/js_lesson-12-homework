@@ -41,15 +41,19 @@ const emails = orders.filter(
 
 // 2. find: Найти заказ, в котором есть товар с productId: 4.
 
-const productId = orders.find(({ items }) => {
-  let find;
-  items.forEach(({ productId }) => {
-    if (productId === 4) {
-      find = true;
-    }
-  });
-  return find;
-});
+// const productId = orders.find(({ items }) => {
+//   let find;
+//   items.forEach(({ productId }) => {
+//     if (productId === 4) {
+//       find = true;
+//     }
+//   });
+//   return find;
+// });
+
+const productId = orders.find(({ items }) =>
+  items.find(({ productId }) => productId === 4)
+);
 
 // console.log(productId);
 
